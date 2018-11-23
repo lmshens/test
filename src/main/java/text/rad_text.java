@@ -41,7 +41,7 @@ class Cmp_text{					//桩模块2
         String temp = new String("");
         for(int i = 0;i<shortstr.length();i++)//先从短字符串的长度开始，逐步递减长度，直到出现符合的字符串
         {
-            for(int j = 0,k = shortstr.length()-i;k<shortstr.length();j++,k++)
+            for(int j = 0,k = 15-i;k<15;j++,k++)
             {
                 temp = shortstr.substring(j, k);
                 if(longstr.contains(temp))

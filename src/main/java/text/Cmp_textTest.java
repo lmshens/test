@@ -39,9 +39,9 @@ public class Cmp_textTest {
 	@Test
 	public void testRad_t2() {
 			System.out.println("This is a test case");
-			String text1 = "dasfagafkjklalsdgasdffdhgdf";
+			String text1 = "dasfagafkjklalsdgasdf";
 			String text2 = "dasfagafkjklalsdgasdf";
-			assertEquals(Cmp_text.MaxSubString(text1, text2), text1);
+			assertEquals(Cmp_text.MaxSubString(text1, text2), text2);
 			
 			System.out.println();
 	}
