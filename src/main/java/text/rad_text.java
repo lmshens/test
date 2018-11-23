@@ -37,7 +37,6 @@ class Cmp_text{					//桩模块2
 	}
 	
 	public static String MaxSubString(String shortstr, String longstr) {
-        // TODO 自动生成的方法存根
         String temp = new String("");
         for(int i = 0;i<shortstr.length();i++)//先从短字符串的长度开始，逐步递减长度，直到出现符合的字符串
         {
