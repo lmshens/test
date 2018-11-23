@@ -33,33 +33,19 @@ class Creat_text{				//桩模块1
 
 class Cmp_text{					//桩模块2
 	public static void cmp_text(String t1, String t2) {
-		boolean a = false, b = false;
-		int c = 0, j = 0, f = 0;
-		for(int i=0; i<t1.length(); i++)
-		{
-			if(b == false) j=f;
-			while(j < 15)				//注入错误
-			{
-				if(t2.charAt(j) == t1.charAt(i))
-				{
-					a = true;
-					b = true;
-					c++;
-					System.out.print(t2.charAt(j) + " ");
-					f = j+1;
-					break;
-				}
-				j++;
-				b = false;
-			}	
-		}
-			
-		if(a == false)
-			System.out.println("There is no same character!");
-		else {
-			System.out.println();
-			double d = c/20.0;
-			System.out.println("The semblance is " + d + "%");
-		}
+		String temp = new String("");
+        for(int i = 0;i<t1.length();i++)//先从短字符串的长度开始，逐步递减长度，直到出现符合的字符串
+        {
+            for(int j = 0,k = t1.length()-i;k<t1.length();j++,k++)
+            {
+                temp = t1.substring(j, k);
+                if(t2.contains(temp))
+                {
+                	System.out.println(temp);
+                }
+            }
+        }
+        System.out.println("There has no same character!");
+
 	}
 }
