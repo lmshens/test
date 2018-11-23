@@ -33,19 +33,23 @@ class Creat_text{				//桩模块1
 
 class Cmp_text{					//桩模块2
 	public static void cmp_text(String t1, String t2) {
-		String temp = new String("");
-        for(int i = 0;i<t1.length();i++)//先从短字符串的长度开始，逐步递减长度，直到出现符合的字符串
+		System.out.println("最大公共子串：" + MaxSubString(t1, t2));
+	}
+	
+	public static String MaxSubString(String shortstr, String longstr) {
+        // TODO 自动生成的方法存根
+        String temp = new String("");
+        for(int i = 0;i<shortstr.length();i++)//先从短字符串的长度开始，逐步递减长度，直到出现符合的字符串
         {
-            for(int j = 0,k = t1.length()-i;k<t1.length();j++,k++)
+            for(int j = 0,k = 15-i;k<15;j++,k++)
             {
-                temp = t1.substring(j, k);
-                if(t2.contains(temp))
+                temp = shortstr.substring(j, k);
+                if(longstr.contains(temp))
                 {
-                	System.out.println(temp);
+                    return temp;
                 }
             }
         }
-        System.out.println("There has no same character!");
-
-	}
+        return null;
+    }
 }
